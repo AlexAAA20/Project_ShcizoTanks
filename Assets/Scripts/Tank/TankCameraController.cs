@@ -67,7 +67,7 @@ public class TankCameraController : MonoBehaviour
     }
 
 
-    void Update()
+    void Update ( )
     {
         // i love the functions in functions
         pivot.position = pivotPosition + transform.position;
@@ -76,12 +76,12 @@ public class TankCameraController : MonoBehaviour
         SingularCast( );
     }
 
-    void HandleInputs( )
+    void HandleInputs ( )
     {
         // turn only on right-mouse-button holding
         if ( Input.GetMouseButton( 1 ) )
         {
-            if ( Input.mouseScrollDelta.magnitude > 0.1f)
+            if ( Input.mouseScrollDelta.magnitude > 0.1f )
             {
                 currZoom = Mathf.Lerp( currZoom, currZoom + Input.mouseScrollDelta.y * zoomSens, 0.17f );
                 currZoom = Mathf.Clamp( currZoom, minZoomout, maxZoomout );
@@ -101,11 +101,11 @@ public class TankCameraController : MonoBehaviour
         Quaternion rotation = Quaternion.Euler( vertical, horizontal, 0 );
         Vector3 direction = rotation * Vector3.forward;
 
-        Gizmos.color = Color.yellow; 
+        Gizmos.color = Color.yellow;
         Gizmos.DrawLine( pivot.position, pivot.position + direction );
     }
 
-    void SingularCast( )
+    void SingularCast ( )
     {
         // hardest thing ever - find a vector out of a rotation
         Quaternion rotation = Quaternion.Euler( vertical, horizontal, 0 );
