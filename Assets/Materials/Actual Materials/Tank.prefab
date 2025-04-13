@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   display: {fileID: 9145190982440247163}
-  knockback: 30
+  knockback: 12
   ready: 0
   pointer: {x: 0, y: 0, z: 0}
 --- !u!1 &4894051715649395381
@@ -805,7 +805,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7677410587348547689}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -838,23 +838,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   belts:
   - collider: {fileID: 3100431964615374845}
-    maxSpeed: 350
-    maxTorque: 300
+    maxSpeed: 2300
+    maxTorque: 2200
     leftMultiplier: -1
     rightMultiplier: 1
   - collider: {fileID: 2615829903217174886}
-    maxSpeed: 350
-    maxTorque: 300
+    maxSpeed: 2300
+    maxTorque: 2200
     leftMultiplier: 1
     rightMultiplier: -1
   inputGeneralSpeed: 0
   inputTurn: 0
   rb: {fileID: 7155625163685197788}
-  jumpPower: 250
-  jumpMultiplier: 20
-  jumpCap: 700
-  secondsTillFlip: 1
-  speedForFlip: 2
+  jumpPower: 1200
+  jumpMultiplier: 150
+  jumpCap: 2500
+  secondsTillFlip: 0.25
+  speedForFlip: 0.75
   root: {fileID: 1502513171554104402}
   speedometer: 0
 --- !u!114 &2492517091862652313
